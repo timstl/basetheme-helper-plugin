@@ -91,7 +91,7 @@ class Plugins {
 			),
 					
 			array(
-				'name' 		=> 'Page Builder  by SiteOrigin',
+				'name' 		=> 'Page Builder by SiteOrigin',
 				'slug' 		=> 'siteorigin-panels',
 				'required' 	=> false		
 			),
