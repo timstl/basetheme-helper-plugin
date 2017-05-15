@@ -26,12 +26,19 @@ define( 'ATMDST_PLUGIN_DIR', plugin_dir_path(__FILE__));
 /* Autoloaders.*/
 include_once( 'lib/loader.php' );
 
-/* Admin */
+/* Plugins Loaded */
 function _atmdst_basetheme_plugins_loaded() {
 	new Classes\ACF();
 	
 	if (is_admin()) { 
 		new Classes\Plugins();
+		new Classes\Admin();
 	}
 }
 add_action('plugins_loaded', __NAMESPACE__ . '\\_atmdst_basetheme_plugins_loaded');
+
+/* This plugin activated */
+function _atmdst_basetheme_plugin_activated() {
+	new Classes\Activated();
+}
+register_activation_hook( __FILE__, __NAMESPACE__ . '\\_atmdst_basetheme_plugin_activated' );
