@@ -36,7 +36,7 @@ namespace ATMDST\Lib\Classes;
 class Plugins {
 	
 	public function __construct() {
-		require_once ATMDST_PLUGIN_DIR . 'lib/classes/tgm-plugin-activation/class-tgm-plugin-activation.php';
+		require_once BASETHEME_HELPER_DIR . 'lib/classes/tgm-plugin-activation/class-tgm-plugin-activation.php';
 		add_action( 'tgmpa_register', array($this, 'register_plugins' ));
 	}
 

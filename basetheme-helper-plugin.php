@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:		Atomicdust Base Plugin
- * Plugin URI:		http://atomicdust.com/
- * Description:		Base functionality to use across sites.
+ * Plugin Name:		Basetheme Helper Plugin
+ * Plugin URI:		http://timgweb.com/
+ * Description:		Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
  * Version:			1.0.0
- * Author:			Atomicdust, Tim Gieseking
- * Author URI:		http://atomicdust.com.com/
+ * Author:			Tim Gieseking, timstl@gmail.com
+ * Author URI:		http://timgweb.com/
  * License:			GPL-2.0+
  * License URI:		http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:		concordia-events-import
@@ -20,14 +20,14 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /* Constants */
-define( 'ATMDST_BASE_PLUGIN', '1.0' );
-define( 'ATMDST_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define( 'BASETHEME_HELPER_VERSION', '1.0' );
+define( 'BASETHEME_HELPER_DIR', plugin_dir_path(__FILE__));
 
 /* Autoloaders.*/
 include_once( 'lib/loader.php' );
 
 /* Plugins Loaded */
-function _atmdst_basetheme_plugins_loaded() {
+function basetheme_helper_plugins_loaded() {
 	new Classes\Cleanup();
 	new Classes\ACF();
 	
@@ -36,13 +36,13 @@ function _atmdst_basetheme_plugins_loaded() {
 		new Classes\Admin();
 	}
 }
-add_action('plugins_loaded', __NAMESPACE__ . '\\_atmdst_basetheme_plugins_loaded');
+add_action('plugins_loaded', __NAMESPACE__ . '\\basetheme_helper_plugins_loaded');
 
 /* This plugin activated */
-function _atmdst_basetheme_plugin_activated() {
+function basetheme_helper_plugin_activated() {
 	new Classes\Activated();
 }
-register_activation_hook( __FILE__, __NAMESPACE__ . '\\_atmdst_basetheme_plugin_activated' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\\basetheme_helper_plugin_activated' );
 
 /* 
 	Logging function.
@@ -50,13 +50,13 @@ register_activation_hook( __FILE__, __NAMESPACE__ . '\\_atmdst_basetheme_plugin_
 	
 	You can then use this function anywhere in your themes or plugin:
 	
-	atomic_log("log message here");
+	bt_log("log message here");
 	
 	This will write to wp-content/debug.log.
 	In terminal: tail -f debug.log 
 */
-if (!function_exists('atomic_log')) {
-	function atomic_log ( $log )  {
+if (!function_exists('bt_log')) {
+	function bt_log ( $log )  {
 		if ( true === WP_DEBUG ) {
 			if ( is_array( $log ) || is_object( $log ) ) {
 				error_log( print_r( $log, true ) );
