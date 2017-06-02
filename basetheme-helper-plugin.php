@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:		Basetheme Helper Plugin
- * Plugin URI:		http://timgweb.com/
+ * Plugin URI:		https://github.com/timstl/basetheme-helper-plugin
  * Description:		Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
  * Version:			1.0.0
  * Author:			Tim Gieseking, timstl@gmail.com
