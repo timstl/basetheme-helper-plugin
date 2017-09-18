@@ -143,6 +143,25 @@ class ACF {
 				'title' => 'Custom Scripts (Site-wide)',
 				'fields' => array (
 					array (
+						'key' => 'field_58c950368f6c7_prewphead',
+						'label' => 'Custom Header Scripts and CSS - Before wp_head()',
+						'name' => 'custom_pre-wp_head_scripts',
+						'type' => 'textarea',
+						'instructions' => 'Outputs before wp_head(). Include &lt;script&gt; and &lt;style&gt; tags. Place font services here.',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'new_lines' => '',
+					),
+					array (
 						'key' => 'field_58c950368f6c7',
 						'label' => 'Custom Header Scripts and CSS',
 						'name' => 'custom_header_scripts',
