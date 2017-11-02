@@ -26,7 +26,7 @@ class ACF {
 		$this->custom_output('header');
 	}
 	
-	public function custom_output_footer() {
+	public function custom_output_wpfooter() {
 		$this->custom_output('footer');
 	}
 	
