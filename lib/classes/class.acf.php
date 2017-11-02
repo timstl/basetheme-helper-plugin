@@ -12,12 +12,17 @@ class ACF {
 			$this->create_acf_pages();
 			$this->create_acf_fields();
 		} else {
-			add_action('wp_head', array($this, 'custom_output_head'), apply_filters('atmdst_custom_output_head_priority', 9999));
-			add_action('wp_footer', array($this, 'custom_output_footer'), apply_filters('atmdst_custom_output_footer_priority', 9999));
+			add_action('wp_head', array($this, 'custom_output_prewphead'), apply_filters('atmdst_custom_output_prewphead_priority', 0));
+			add_action('wp_head', array($this, 'custom_output_wphead'), apply_filters('atmdst_custom_output_head_priority', 9999));
+			add_action('wp_footer', array($this, 'custom_output_wpfooter'), apply_filters('atmdst_custom_output_footer_priority', 9999));
 		}
 	}
 	
-	public function custom_output_head() {
+	public function custom_output_prewphead() {
+		$this->custom_output('pre-wp_head');
+	}
+
+	public function custom_output_wphead() {
 		$this->custom_output('header');
 	}
 	
