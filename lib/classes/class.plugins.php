@@ -91,29 +91,9 @@ class Plugins {
 			),
 					
 			array(
-				'name' 		=> 'Page Builder by SiteOrigin',
-				'slug' 		=> 'siteorigin-panels',
-				'required' 	=> false		
-			),
-			array(
-				'name' 		=> 'SiteOrigin Widgets Bundle',
-				'slug' 		=> 'so-widgets-bundle',
-				'required' 	=> false		
-			),
-			array(
 				'name' 		=> 'WordPress SEO by Yoast',
 				'slug' 		=> 'wordpress-seo',
 				'required' 	=> false		
-			),
-			array(
-				'name' 		=> 'BulletProof Security',
-				'slug' 		=> 'bulletproof-security',
-				'required' 	=> false			
-			),
-			array(
-				'name' 		=> 'Wordfence',
-				'slug' 		=> 'wordfence',
-				'required' 	=> false
 			),
 			array(
 				'name' 		=> 'Simple 301 Redirects',
