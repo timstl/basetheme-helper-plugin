@@ -3,7 +3,7 @@
  * Plugin Name:		Basetheme Helper Plugin
  * Plugin URI:		https://github.com/timstl/basetheme-helper-plugin
  * Description:		Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
- * Version:			1.0.0
+ * Version:			1.1.0
  * Author:			Tim Gieseking, timstl@gmail.com
  * Author URI:		http://timgweb.com/
  * License:			GPL-2.0+
@@ -37,6 +37,14 @@ function basetheme_helper_plugins_loaded() {
 	}
 }
 add_action('plugins_loaded', __NAMESPACE__ . '\\basetheme_helper_plugins_loaded');
+
+/* Init */
+function basetheme_helper_init() {
+	$busted = new Classes\Busted();
+	$busted->init();
+}
+add_action( 'init', __NAMESPACE__ . '\\basetheme_helper_init');
+add_action( 'admin_init', __NAMESPACE__ . '\\basetheme_helper_init');
 
 /* This plugin activated */
 function basetheme_helper_plugin_activated() {
