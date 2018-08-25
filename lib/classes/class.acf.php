@@ -277,7 +277,7 @@ class ACF {
 
 			acf_add_local_field_group(array(
 				'key' => 'group_5b3e46a826f7b',
-				'title' => 'Footer',
+				'title' => 'Copyright',
 				'fields' => array(
 					array(
 						'key' => 'field_5b3e4ca259594',
