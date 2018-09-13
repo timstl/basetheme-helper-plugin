@@ -1,17 +1,23 @@
 <?php
 /**
- * Plugin Name:		Basetheme Helper Plugin
- * Plugin URI:		https://github.com/timstl/basetheme-helper-plugin
- * Description:		Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
- * Version:			1.1.1
- * Author:			Tim Gieseking, timstl@gmail.com
- * Author URI:		http://timgweb.com/
- * License:			GPL-2.0+
- * License URI:		http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:		basetheme
+ * Plugin Name:     Basetheme Helper Plugin
+ * Plugin URI:      https://github.com/timstl/basetheme-helper-plugin
+ * Description:     Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
+ * Version:         1.2
+ * Author:          Tim Gieseking, timstl@gmail.com
+ * Author URI:      http://timgweb.com/
+ * License:         GPL-2.0+
+ * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:     basetheme
+ *
+ * @package WordPress
+ * @subpackage Basetheme Helper Plugin
+ * @since 1.0
+ * @version 1.2
  */
 
 namespace ATMDST;
+
 use ATMDST\Lib\Classes;
 
 /* Abort! */
@@ -21,32 +27,38 @@ if ( ! defined( 'WPINC' ) ) {
 
 /* Constants */
 define( 'BASETHEME_HELPER_VERSION', '1.1.1' );
-define( 'BASETHEME_HELPER_DIR', plugin_dir_path(__FILE__));
+define( 'BASETHEME_HELPER_DIR', plugin_dir_path( __FILE__ ) );
 
 /* Autoloaders.*/
-include_once( 'lib/loader.php' );
+require_once 'lib/loader.php';
 
-/* Plugins Loaded */
+/**
+ * Plugins loaded.
+ */
 function basetheme_helper_plugins_loaded() {
 	new Classes\Cleanup();
 	new Classes\ACF();
-	
-	if (is_admin()) { 
+
+	if ( is_admin() ) {
 		new Classes\Plugins();
 		new Classes\Admin();
 	}
 }
-add_action('plugins_loaded', __NAMESPACE__ . '\\basetheme_helper_plugins_loaded');
+add_action( 'plugins_loaded', __NAMESPACE__ . '\\basetheme_helper_plugins_loaded' );
 
-/* Init */
+/**
+ * Init.
+ */
 function basetheme_helper_init() {
 	$busted = new Classes\Busted();
 	$busted->init();
 }
-add_action( 'init', __NAMESPACE__ . '\\basetheme_helper_init');
-add_action( 'admin_init', __NAMESPACE__ . '\\basetheme_helper_init');
+add_action( 'init', __NAMESPACE__ . '\\basetheme_helper_init' );
+add_action( 'admin_init', __NAMESPACE__ . '\\basetheme_helper_init' );
 
-/* This plugin activated */
+/**
+ * This plugin activated.
+ */
 function basetheme_helper_plugin_activated() {
 	new Classes\Activated();
 }

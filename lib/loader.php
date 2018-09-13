@@ -32,9 +32,9 @@ spl_autoload_register(function( $filename ) {
 			$file_path[ count( $file_path ) - 1 ]
 		);
 
-		// The classname has an underscore, so we need to replace it with a period for the file name.
-		$class_file = str_ireplace( '_', '.', $class_file );
-		$class_file = "class.$class_file.php";
+		// The classname has an underscore, so we need to replace it with a dash for the file name.
+		$class_file = str_ireplace( '_', '-', $class_file );
+		$class_file = "class-$class_file.php";
 	}
 
 	/**
