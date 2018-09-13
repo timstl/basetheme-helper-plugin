@@ -31,7 +31,7 @@
  * Plugin:
  * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
  */
-namespace ATMDST\Lib\Classes;
+namespace BTH\Lib\Classes;
 
 class Plugins
 {

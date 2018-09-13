@@ -11,7 +11,7 @@
  * @version 1.2
  */
 
-namespace ATMDST\Lib\Classes;
+namespace BTH\Lib\Classes;
 
 /**
  * Busted Class

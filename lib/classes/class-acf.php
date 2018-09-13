@@ -10,7 +10,7 @@
  * @version 1.2
  */
 
-namespace ATMDST\Lib\Classes;
+namespace BTH\Lib\Classes;
 
 /**
  * ACF Class
@@ -25,9 +25,9 @@ class ACF {
 			$this->create_acf_pages();
 			$this->create_acf_fields();
 		} else {
-			add_action( 'wp_head', array( $this, 'custom_output_prewphead' ), apply_filters( 'atmdst_custom_output_prewphead_priority', 0 ) );
-			add_action( 'wp_head', array( $this, 'custom_output_wphead' ), apply_filters( 'atmdst_custom_output_head_priority', 9999 ) );
-			add_action( 'wp_footer', array( $this, 'custom_output_wpfooter' ), apply_filters( 'atmdst_custom_output_footer_priority', 9999 ) );
+			add_action( 'wp_head', array( $this, 'custom_output_prewphead' ), apply_filters( 'bth_custom_output_prewphead_priority', 0 ) );
+			add_action( 'wp_head', array( $this, 'custom_output_wphead' ), apply_filters( 'bth_custom_output_head_priority', 9999 ) );
+			add_action( 'wp_footer', array( $this, 'custom_output_wpfooter' ), apply_filters( 'bth_custom_output_footer_priority', 9999 ) );
 		}
 	}
 

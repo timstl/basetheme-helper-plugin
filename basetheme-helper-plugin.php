@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Basetheme Helper Plugin
  * Plugin URI:      https://github.com/timstl/basetheme-helper-plugin
- * Description:     Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
+ * Description:     Base functionality to use across sites. Requires ACF. Moves some functionality from Basetheme into plugin for use with other themes.
  * Version:         1.2
  * Author:          Tim Gieseking, timstl@gmail.com
  * Author URI:      http://timgweb.com/
@@ -16,9 +16,9 @@
  * @version 1.2
  */
 
-namespace ATMDST;
+namespace BTH;
 
-use ATMDST\Lib\Classes;
+use BTH\Lib\Classes;
 
 /* Abort! */
 if ( ! defined( 'WPINC' ) ) {
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /* Constants */
-define( 'BASETHEME_HELPER_VERSION', '1.1.1' );
+define( 'BASETHEME_HELPER_VERSION', '1.2' );
 define( 'BASETHEME_HELPER_DIR', plugin_dir_path( __FILE__ ) );
 
 /* Autoloaders.*/
