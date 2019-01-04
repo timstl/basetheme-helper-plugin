@@ -1,7 +1,6 @@
 <?php
 /**
  * Creates General "Site Settings" ACF Options page
- * Creates ACF fields for site-wide head and footer code, as well as page-by-page head and footer code.
  * Hooks in to wp_head and wp_footer to output code.
  *
  * @package WordPress
