@@ -68,18 +68,6 @@ class Plugins {
 		$plugins = array(
 			// This is an example of how to include a plugin pre-packaged with a theme
 			array(
-				'name'               => 'Gravity Forms (Manual Install Only)', // The plugin name
-				'slug'               => 'gravityforms', // The plugin slug (typically the folder name)
-				'source'             => 'https://www.gravityforms.com/my-account/downloads/', // The plugin source
-				'required'           => false, // If false, the plugin is only 'recommended' instead of required
-				'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-				'external_url'       => 'https://www.gravityforms.com/my-account/downloads/', // If set, overrides default API URL and points to an external URL
-			),
-
-			// This is an example of how to include a plugin pre-packaged with a theme
-			array(
 				'name'               => 'Advanced Custom Fields PRO (Manual Install Only)', // The plugin name
 				'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name)
 				'source'             => 'http://www.advancedcustomfields.com/my-account/', // The plugin source
@@ -91,14 +79,31 @@ class Plugins {
 			),
 
 			array(
-				'name'     => 'WordPress SEO by Yoast',
-				'slug'     => 'wordpress-seo',
+				'name'     => 'Advanced Custom Fields: Font Awesome Field',
+				'slug'     => 'advanced-custom-fields-font-awesome',
 				'required' => false,
 			),
 
 			array(
-				'name'     => 'Advanced Custom Fields: Font Awesome Field',
-				'slug'     => 'advanced-custom-fields-font-awesome',
+				'name'     => 'Autoptimize',
+				'slug'     => 'autoptimize',
+				'required' => false,
+			),
+
+			array(
+				'name'               => 'Gravity Forms (Manual Install Only)', // The plugin name
+				'slug'               => 'gravityforms', // The plugin slug (typically the folder name)
+				'source'             => 'https://www.gravityforms.com/my-account/downloads/', // The plugin source
+				'required'           => false, // If false, the plugin is only 'recommended' instead of required
+				'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+				'external_url'       => 'https://www.gravityforms.com/my-account/downloads/', // If set, overrides default API URL and points to an external URL
+			),
+
+			array(
+				'name'     => 'WordPress SEO by Yoast',
+				'slug'     => 'wordpress-seo',
 				'required' => false,
 			),
 		);
