@@ -45,6 +45,7 @@ class Busted {
 		 *
 		 * Extremely high priority assures we catch everything.
 		 */
+		add_action( 'admin_enqueue_scripts', __CLASS__ . '::wp_enqueue_scripts', PHP_INT_MAX - 1 );
 		add_action( 'wp_enqueue_scripts', __CLASS__ . '::wp_enqueue_scripts', PHP_INT_MAX - 1 );
 		add_action( 'get_footer', __CLASS__ . '::wp_enqueue_scripts', PHP_INT_MAX - 1 );
 
