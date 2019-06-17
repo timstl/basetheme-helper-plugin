@@ -23,14 +23,14 @@ class Busted {
 	 *
 	 * @var string Name for query arguments and version identifier.
 	 */
-	static protected $version_slug = 'b-modified';
+	protected static $version_slug = 'b-modified';
 
 	/**
 	 * Version string
 	 *
 	 * @var string Version string with current time to break caches.
 	 */
-	static protected $version_string;
+	protected static $version_string;
 
 	/**
 	 * Setup hooks and vars.
@@ -46,6 +46,7 @@ class Busted {
 		 * Extremely high priority assures we catch everything.
 		 */
 		add_action( 'wp_enqueue_scripts', __CLASS__ . '::wp_enqueue_scripts', PHP_INT_MAX - 1 );
+		add_action( 'get_footer', __CLASS__ . '::wp_enqueue_scripts', PHP_INT_MAX - 1 );
 
 		add_filter( 'stylesheet_uri', __CLASS__ . '::stylesheet_uri' );
 		add_filter( 'locale_stylesheet_uri', __CLASS__ . '::stylesheet_uri' );
@@ -60,23 +61,26 @@ class Busted {
 	public static function wp_enqueue_scripts() {
 
 		global $wp_scripts, $wp_styles;
-
 		foreach ( array( $wp_scripts, $wp_styles ) as $enqueue_list ) {
 
-			if ( ! isset( $enqueue_list->__busted_filtered ) && is_object( $enqueue_list ) ) {
+			if ( is_object( $enqueue_list ) && isset( $enqueue_list->registered ) ) {
 
-				if ( isset( $enqueue_list->registered ) ) {
-					foreach ( (array) $enqueue_list->registered as $handle => $script ) {
+				foreach ( (array) $enqueue_list->registered as $handle => $script ) {
 
+					if ( ! isset( $enqueue_list->registered[ $handle ]->__busted_filtered ) ) {
 						$modification_time = self::modification_time( $script->src );
 
 						if ( $modification_time ) {
 
+							if ( ! $script->ver ) {
+								$script->ver = '1';
+							}
 							$version = $script->ver . '-' . self::$version_slug . '-' . $modification_time;
 
 							$enqueue_list->registered[ $handle ]->ver = $version;
 
 						}
+						$enqueue_list->registered[ $handle ]->__busted_filtered = true;
 					}
 				}
 
@@ -88,7 +92,6 @@ class Busted {
 
 			}
 		}
-
 	}
 
 	/**
