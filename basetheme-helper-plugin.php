@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Basetheme Helper Plugin
+ * Plugin Name:     Basetheme - Helper Plugin
  * Plugin URI:      https://github.com/timstl/basetheme-helper-plugin
  * Description:     Base functionality to use across sites. Requires ACF. Moves some functionality from Basetheme into plugin for use with other themes.
  * Version:         1.4
