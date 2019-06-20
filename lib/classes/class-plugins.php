@@ -72,7 +72,7 @@ class Plugins {
 				'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name)
 				'source'             => 'http://www.advancedcustomfields.com/my-account/', // The plugin source
 				'required'           => false, // If false, the plugin is only 'recommended' instead of required
-				'version'            => '5.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'version'            => '5.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url'       => 'http://www.advancedcustomfields.com/my-account/', // If set, overrides default API URL and points to an external URL
@@ -95,7 +95,6 @@ class Plugins {
 				'slug'               => 'gravityforms', // The plugin slug (typically the folder name)
 				'source'             => 'https://www.gravityforms.com/my-account/downloads/', // The plugin source
 				'required'           => false, // If false, the plugin is only 'recommended' instead of required
-				'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 				'external_url'       => 'https://www.gravityforms.com/my-account/downloads/', // If set, overrides default API URL and points to an external URL

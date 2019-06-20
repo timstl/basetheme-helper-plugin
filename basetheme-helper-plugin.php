@@ -3,7 +3,7 @@
  * Plugin Name:     Basetheme - Helper Plugin
  * Plugin URI:      https://github.com/timstl/basetheme-helper-plugin
  * Description:     Base functionality to use across sites. Requires ACF. Moves some functionality from Basetheme into plugin for use with other themes.
- * Version:         1.4.1
+ * Version:         1.4.2
  * Author:          Tim Gieseking, timstl@gmail.com
  * Author URI:      http://timgweb.com/
  * License:         GPL-2.0+
