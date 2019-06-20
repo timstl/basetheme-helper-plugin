@@ -24,7 +24,6 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /* Constants */
-define( 'BASETHEME_HELPER_VERSION', '1.3' );
 define( 'BASETHEME_HELPER_DIR', plugin_dir_path( __FILE__ ) );
 
 /* Autoloaders.*/
