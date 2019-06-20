@@ -102,6 +102,12 @@ class Plugins {
 			),
 
 			array(
+				'name'     => 'SVG Support',
+				'slug'     => 'svg-support',
+				'required' => false,
+			),
+
+			array(
 				'name'     => 'WordPress SEO by Yoast',
 				'slug'     => 'wordpress-seo',
 				'required' => false,
