@@ -60,8 +60,15 @@ class ACF {
 			return;
 		}
 
-		the_field( 'custom_' . $location . '_scripts', 'options' );
-		the_field( 'custom_' . $location . '_scripts' );
+		if ( get_field( 'custom_' . $location . '_scripts', 'options' ) ) {
+			the_field( 'custom_' . $location . '_scripts', 'options' );
+			echo "\r\n";
+		}
+
+		if ( get_field( 'custom_' . $location . '_scripts' ) ) {
+			the_field( 'custom_' . $location . '_scripts' );
+			echo "\r\n";
+		}
 	}
 
 	/**
