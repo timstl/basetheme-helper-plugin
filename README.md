@@ -2,13 +2,6 @@
 
 Base functionality to use across sites. Moves some functionality from Basetheme into plugin for use with other themes.
 
-### class.acf.php
-
--   Creates ACF-powered Site Settings page (general site options)
--   Creates side-wide Head and Footer custom code sections. Allows admin to insert custom JS or CSS without dev.
--   Creates page-specific Head and Footer custom code sections.
--   Outputs custom code to wp_head and wp_footer.
-
 ### class.activated.php
 
 -   Runs when this plugin is activated.
