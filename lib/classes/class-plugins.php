@@ -91,6 +91,16 @@ class Plugins {
 			),
 
 			array(
+				'name'               => 'Basetheme - Modify Core Blocks', // The plugin name
+				'slug'               => 'basetheme-modify-core-blocks', // The plugin slug (typically the folder name)
+				'source'             => 'https://github.com/timstl/basetheme-modify-core-blocks/archive/master.zip', // The plugin source
+				'required'           => false, // If false, the plugin is only 'recommended' instead of required
+				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+				'external_url'       => 'https://github.com/timstl/basetheme-modify-core-blocks', // If set, overrides default API URL and points to an external URL
+			),
+
+			array(
 				'name'               => 'Gravity Forms (Manual Install Only)', // The plugin name
 				'slug'               => 'gravityforms', // The plugin slug (typically the folder name)
 				'source'             => 'https://www.gravityforms.com/my-account/downloads/', // The plugin source
