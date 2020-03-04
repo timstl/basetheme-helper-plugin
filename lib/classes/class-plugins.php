@@ -111,6 +111,12 @@ class Plugins {
 			),
 
 			array(
+				'name'     => 'Kadence Blocks – Gutenberg Page Builder Toolkit',
+				'slug'     => 'kadence-blocks',
+				'required' => false,
+			),
+
+			array(
 				'name'     => 'SVG Support',
 				'slug'     => 'svg-support',
 				'required' => false,
