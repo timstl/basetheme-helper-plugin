@@ -23,11 +23,6 @@ Base functionality to use across sites. Moves some functionality from Basetheme 
 
 -   Removes version and other unncessary info from wp_head
 
-### class.plugins.php
-
--   Prompts to install various plugins using tgm-plugin-activation class
--   Not all needed on every site, but includes common plugins like ACF, Gravity Forms, Wordfence, etc.
-
 ### misc
 
 -   bt_log function for misc theme or plugin logging to wp-content/debug.log.
